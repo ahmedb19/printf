@@ -89,7 +89,9 @@ int print_nrs(char *str, params_t *params)
 		n += _putchar(pad_char);
 	if (neg && pad_char == ' ')
 		n += _putchar('-');
-	if (params->plus_flag && params->space_flag && !neg2 && !params->unsign && !params->zero_flag)
+	if (params->plus_flag && !neg2 && pad_char == ' ' && !params->unsign)
+		n += _putchar('+');
+	else if (!params->plus_flag && params->space_flag && !neg2 &&     !params->unsign && params->zero_flag)
 		n += _putchar(' ');
 	n += _puts(str);
 	return (n);
@@ -105,7 +107,7 @@ int print_nrs(char *str, params_t *params)
 int print_nls(char *str, params_t *params)
 {
 	unsigned int n = 0, neg, neg2, i = _strlen(str);
-	char pad_char = '0';
+	char pad_char = ' ';
 
 	if (params->zero_flag && !params->minus_flag)
 		pad_char = '0';

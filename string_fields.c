@@ -13,7 +13,7 @@ char *get_precision(char *p, params_t *paramsn va_list arg)
 {
 	int d = 0;
 
-	if (!p = '.')
+	if (*p != '.')
 		return (p);
 	p++;
 	if (*p == '*')
