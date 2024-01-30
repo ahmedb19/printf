@@ -19,12 +19,13 @@
 #define CONVERT_UNSIGNED 2
 
 /**
- * struct paramaters - parameters struct
+ * struct parameters - parameters struct
  *
- * @unsign - unsigned value flag
+ * @unsign: unsigned value flag
  *
  * @plus_flag: True if plus_flag was specified
  * @space_flag: True if hashtag_flag was specified
+ * @hashtag_flag: True if _flag was specified
  * @zero_flag: True if _flag was specified
  * @minus_flag: True if _flag was specified
  *

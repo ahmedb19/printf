@@ -2,7 +2,7 @@
 
 /**
  *convert - converter function
- *@num - Number
+ *@num: Number
  *@base: Base
  *@flags: argument flags
  *@params: parameter struct
@@ -24,7 +24,7 @@ char *convert(long int num, int base, int flags, params_t *params)
 		n = -num;
 		sign = '-';
 	}
-	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef": "0123456789ABCDEF";
+	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 	ptr = &buffer[49];
 	*ptr = '\0';
 
