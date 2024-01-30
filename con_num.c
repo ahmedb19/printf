@@ -99,7 +99,7 @@ int print_octal(va_list arg, params_t *params)
 		l = (unsigned int)va_arg(arg, unsigned int);
 	str = convert(l, 8, CONVERT_UNSIGNED, params);
 
-	if (params->hashtag_file && l)
+	if (params->hashtag_flag && l)
 		*--str = '0';
 	params->unsign = 1;
 	return (c += print_number(str, params));

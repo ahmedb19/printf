@@ -10,7 +10,7 @@
 int print_char(va_list arg, params_t *params)
 {
 	char pad_char = ' ';
-	unsigned int pad = 1; sum = 0; ch = va_arg(arg, int);
+	unsigned int pad = 1, sum = 0, ch = va_arg(arg, int);
 
 	if (params->minus_flag)
 		sum += _putchar(ch);

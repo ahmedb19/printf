@@ -6,7 +6,7 @@
  *
  *Return: 1 if digit, else 0
  */
-int _isdigit(char c)
+int _isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }
@@ -72,11 +72,11 @@ int print_nrs(char *str, params_t *params)
 	if (params->zero_flag && !params->minus_flag)
 		pad_char = '0';
 	neg = neg2 = (!params->unsign && *str == '-');
-	if (neg && i < params->width && pad_char = '0' && !params->minus_flag)
+	if (neg && i < params->width && pad_char == '0' && !params->minus_flag)
 		str++;
 	else
 		neg = 0;
-	if ((prams->plus_flag && !neg2) || 
+	if ((params->plus_flag && !neg2) || 
 			(!params->plus_flag && params->space_flag && !neg2))
 		i++;
 	if (neg && pad_char == '0')
