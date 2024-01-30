@@ -63,7 +63,7 @@ typedef struct parameters
 typedef struct specifier
 {
 	char *specifier;
-	int (*f)(va_list, param_t *);
+	int (*f)(va_list, params_t *);
 } specifier_t;
 
 int _puts(char *str);
@@ -85,6 +85,15 @@ int get_falg(char *s, params_t *params);
 int get_modifier(char *s, params_t *params);
 char *get_width(char *s, params_t *params, va_list arg);
 
+int print_hex(va_list arg, params_t *params);
+int print_HEX(va_list arg, params_t *params);
+int print_binary(va_list arg, params_t *params);
+int print_octal(va_list arg, params_t *params);
+
+int print_from_to(char *start, char *stop, char *except);
+int print_rev(va_list arg, params_t *params);
+int print_rot13(va_list arg, params_t *params);
+
 int _isdigit(int c);
 int _strlen(char *s);
 int print_number(char *str, params_t *params);
@@ -93,7 +102,7 @@ int print_nls(char *str, params_t *params);
 
 void init_params(params_t *params, va_list arg);
 
-char *get_precision(char *p, params_t *params, va_list ap);
+char *get_precision(char *p, params_t *params, va_list arg);
 
 int _printf(const char *format, ...);
 
